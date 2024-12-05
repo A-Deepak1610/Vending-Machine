@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vending Machine</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lato:wght@300;700;900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/logo.png">
+    <script src="main.js"></script>
+</head>
+<body>
+    <header>
+        <div class="cartfixed" id="cartfixed"><a href="#cartbox"><button class="buttoncart" onclick="cart(event);buynow()"><span id="noitems"> </span> <i class="fa-solid fa-cart-shopping"></i></button></a></div>
+        <h1 class="heading">The Vending Spot</h1>
+       <a href="#cartbox"> <button class="cart" onclick="cart(event);buynow()"> <i class="fa-solid fa-cart-shopping"></i><span id="noitemss"> </span> My Cart</button></a>
+    </header>
+    
+    <div class="products">
+        <div class="product1"><img src="img/temptaion.png" class="iproduct1"  title="Cadbury Temptations">
+        <div class="text"><p>Cadbury Temptations Rum & Raisins  Chocolate Bar, 72g</p ><p class="prize">₹109</p></div>
+        <p class="stock">Stock:<span id="stock1">10</span</p>
+        <div class="addbutton"><button class="add" id="addtemptations" onclick="addtemptations()"><i class="fa-solid fa-cart-shopping"></i>Add</button></div>
+        </div>
+        <div class="product2"><img src="img/dairy milk.webp"class="iproduct1" alt="" title="Dairy Milk"><div class="text"><p>Cadbury Dairy Milk Silk Roast Almond Chocolate Bar 143g</p >
+        <p class="prize">₹152</p></div>
+        <p class="stock">Stock:<span id="stock2">10</span</p>
+        <div class="addbutton"><button class="add" id="addrost" onclick="addrost()"><i class="fa-solid fa-cart-shopping"></i>Add</button></div>
+        </div>                                        
+        <div class="product3"><img src="img/kit kat.jpg" class="iproduct1"  title="KitKat" alt="">
+            <div class="text"><p>Kitkat Caramel Chocolate Coated Wafer Bar, 50g, Pack</p ><p class="prize">₹70</p></div>
+            <p class="stock">Stock:<span id="stock3">10</span</p>
+            <div class="addbutton"><button class="add" id="addkitkat" onclick="addkitkat()"><i class="fa-solid fa-cart-shopping"></i>Add</button></div></div> 
+        <div class="product4"><img src="img/milkybar.webp" class="iproduct1" title="Milkybar" alt="">
+            <div class="text"><p>Milkybar, yummy creamy treat, made with milk, 42g, Pack</p ><p class="prize">₹35</p></div>
+            <p class="stock">Stock:<span id="stock4">10</span></p>
+            <div class="addbutton"><button class="add" id="addmilkybar" onclick="addmilkybar()"><i class="fa-solid fa-cart-shopping"></i>Add</button></div></div> 
+    </div>
+    <div class="products">
+        <div class="product1"><img src="img/lays.jpg" class="iproduct1"title="Lays" alt="">
+        <div class="text"><p>Lay's Potato Chips 48 Gram, American Style Cream & Onion </p ><p class="prize">₹20</p></div>
+        <p class="stock">Stock:<span id="stock5">10</span></p>
+        <div class="addbutton"><button class="add" id="addlays" onclick="addlays()"><i class="fa-solid fa-cart-shopping"></i>Add</button></div>
+        </div>
+        <div class="product2"><img src="img/pringles.webp"class="iproduct1" title="Pringles" alt=""><div class="text"><p>Pringles Original | Potato Chips | Classic Salted Potato </p >
+        <p class="prize">₹170</p></div>
+        <p class="stock">Stock:<span id="stock6">10</span</p>
+        <div class="addbutton"><button class="add" id="addpringles" onclick="addpringles()"><i class="fa-solid fa-cart-shopping"></i>Add</button></div>
+        </div>                                        
+        <div class="product3"><img src="img/kerelachips.jpg" class="iproduct1"  title="KeralaChips" alt="">
+            <div class="text"><p>Beyond Snack Kerala Banana Chips-Original Style 30 Gms</p ><p class="prize">₹70</p></div>
+            <p class="stock">Stock:<span id="stock7">10</span</p>
+            <div class="addbutton"><button class="add" id="addkerelachips" onclick="addkerelachips()"><i class="fa-solid fa-cart-shopping"></i>Add</button></div></div> 
+        <div class="product4"><img src="img/kurkure.webp" class="iproduct1"  title="Kurkure">
+            <div class="text"><p>Kurkure, Masala Munch, 36g/38g (25.3g+12.7g EXTRA)</p ><p class="prize">₹10</p></div>
+            <p class="stock">Stock:<span id="stock8">10</span</p>
+            <div class="addbutton"><button class="add" id="addkurkure" onclick="addkurkure()"><i class="fa-solid fa-cart-shopping"></i>Add</button></div></div> 
+    </div>
+    <div class="products">
+        <div class="product1"><img src="img/pepsi.jpg" class="iproduct1"  title="Pepsi">
+        <div class="text"><p>Pepsi Bold Taste No Calorie, 320 ml </p ><p class="prize">₹150</p></div>
+        <p class="stock">Stock:<span id="stock9">10</span</p>
+        <div class="addbutton"><button class="add" id="addpepsi" onclick="addpepsi()"><i class="fa-solid fa-cart-shopping"></i>Add</button></div>
+        </div>
+        <div class="product2"><img src="img/pulpy.webp"class="iproduct1"  title="Pulpy"><div class="text">
+        <p>Minute Maid Pulpy Orange Juice drink | Orange Juice</p >
+        <p class="prize">₹66</p></div>
+        <p class="stock">Stock:<span id="stock10">10</span</p>
+        <div class="addbutton"><button class="add" id="addpulpy" onclick="addpulpy()"><i class="fa-solid fa-cart-shopping"></i>Add</button></div>
+        </div>                                        
+        <div class="product3"><img src="img/pomegranatejuce.jpg" class="iproduct1" title="PomegranateJuice"  alt="">
+            <div class="text"><p>Real Pomegranate Fruit Nectar Juice -1L | Rich in Vitamin C </p ><p class="prize">₹111</p></div>
+            <p class="stock">Stock:<span id="stock11">10</span</p>
+            <div class="addbutton"><button class="add" id="addpomegranate" onclick="addpomegranate()"><i class="fa-solid fa-cart-shopping"></i>Add</button></div></div> 
+        <div class="product4"><img src="img/milkshake.webp" class="iproduct1" title="Milkshake" alt="">
+            <div class="text"><p>Sunfeast Vanilla Milkshake, Creamy & Smooth Milkshake </p ><p class="prize">₹32</p></div>
+            <p class="stock">Stock:<span id="stock12">10</span</p>
+            <div class="addbutton"><button class="add" id="addvanilla" onclick="addvanilla()"><i class="fa-solid fa-cart-shopping"></i>Add</button></div></div> 
+    </div>
+    <div class="empty">
+        </i><button class="cartt" onclick="cartt();buynow()">  <i class="fa-solid fa-cart-shopping"></i> <span id="noitemss"></span> CHECKOUT</button>
+    </div>
+    <div class="cartbox" id="cartbox"> <nav><span class="yourcart">Your Cart</span><button class="exit" onclick="exit()"><i class="fa-regular fa-circle-xmark"></i></button></nav>
+        <div class="horizondal"><ul id="selectedproducts" class="selectedproducts"></ul>
+        <h1 class="bill">Bill Sumarry</h1><p class="total" id="total"></p>
+        <div class="buynowbutton"><button class="clear" onclick="clearr()"><img src="img/clear-filter (1).png" class="clearimg" alt="">CLEAR</button><button class="buynoww" onclick="payments();discount()">Buy Now</button></div></div>
+    </div>
+    <div class="payments" id="payments"><span class="payment">Payments</span><button class="exit" onclick="exitpayments()"><i class="fa-regular fa-circle-xmark"></i></button>
+    <p class="totalamt" id="totalamt">Total Amount:₹<p class="Do">Do you have Discount code?</p>
+    <div class="discount"><input type="text" class="inputdiscount" id="inputdiscount" placeholder="Enter Discount Code">
+    <button class="apply" onclick="discount()">Apply</button></div>
+    <p class="discounted" id="discounted"></p>
+    <p class="finalprice" id="finalprice"></p>
+    <div class="payoption">
+    <button class="cash" onclick="cash()"><img src="img/dollar.png" alt="" class="cashicon">CASH</button><button class="gpay" onclick="gpay()"><img src="img/pngwing.com.png" alt="" class="gpayicon">GPAY</button></div>
+    </div>
+    <div class="cashpage" id="cashpage"><div class="thankyou" id="thankyou"><p class="cashheading"><img src="img/correct.png.png" alt="" class="correct">All Products Dispensed!</p>
+    <p class="thank">Thanks for shopping with us.Have a nice day!</p><div class="rating"><p class="rate">Rate your experience</p>
+    <div class="stars"><center>
+        <button id="star1" onclick="star1('star1')"><i class="fa-regular fa-star"></i></button>
+        <button id="star2" onclick="star1('star2')" ><i class="fa-regular fa-star"></i></button>
+        <button id="star3"onclick="star1('star3')" ><i class="fa-regular fa-star"></i></button>
+        <button id="star4"onclick="star1('star4')" ><i class="fa-regular fa-star"></i></button>
+        <button id="star5"onclick="star1('star5')" ><i class="fa-regular fa-star"></i></button></center></div>
+       </div> <center><button class="closecash" id="closecash" onclick="paymentscash()">Close</button></center></div>
+    <p class="load" id="load">Loading</p><span class="loading" id="loading"></span>
+    </div>
+    <div class="gpaypage" id="gpaypage"><h1 class="scan">Scan the Qr code</h1>
+    <center><img src="img/gpayqrcode-removebg-preview.png" alt="" title="qrcode" class="qrcode"></center>
+    <button class="closegay" id="closegpayqrcode" onclick="paymentscash()">Pay with in (5)</button></div>
+    <div class="summa"></div>
+</body>
+</html> 
